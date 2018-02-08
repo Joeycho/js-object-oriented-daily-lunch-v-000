@@ -161,6 +161,8 @@ class Employer{
     this.deliveries().forEach(delivery =>{
       obj[delivery.mealId]++
     })
+
+    return obj
   }
 
 }
