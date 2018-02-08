@@ -152,7 +152,15 @@ class Employer{
   }
 
   mealTotals(){
-    return
+    let obj = new Object();
+
+    this.meals().forEach(meal =>{
+      obj[meal.id]=0
+    })
+
+    this.deliveries().forEach(delivery =>{
+      obj[delivery.mealId]++
+    })
   }
 
 }
